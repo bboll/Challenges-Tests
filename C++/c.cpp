@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const int MAX_SIZE = 500;
+const int MAX_SIZE = 2000;
 
 void generateNonEs(vector<int>& list)
 {
