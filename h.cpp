@@ -11,43 +11,64 @@ int main()
 {
   string input;
   vector<string> numbers;
-  string number;
+  string number="";
   int digit_ctr = 0;
   int spaces = 0;
-  bool counting = false;
   while(input!="#")
   {
     getline(cin, input);
-    for(int idx=0; idx<input.size(); ++idx)
+    if(input=="*")
     {
-      if(input[idx] == ' ' && !counting) { counting = true; }
-      while(counting)
-      {
-      if(digit_ctr > 4){
+      cout << "* entered\n";
+      cout << "digit_ctr: " << digit_ctr << "\n";
+      for(; digit_ctr <= 4; ++digit_ctr)
+        number += "0";
+        
+        cout << number << "\n";
         numbers.push_back(number);
-        cout << "number: " << number << "\n";
         number = "";
-        digit_ctr = 0;
-      }
-      spaces = 0; 
-        if(input[idx] == ' ')
-          ++spaces;
-        else 
-        { 
-          cout << "spaces: " << spaces << "\n";
-          counting = false; 
-          ++digit_ctr;
-          if(spaces % 2 == 0){
-            number += "1";
-          }
-          else {
-            number += "0";
-          }
-        }
+        
+      digit_ctr = 0;
+    }
+    else 
+    {
 
-        ++idx;
+      //Grabs a line for input
+
+      //Find position of first space, then find position of next non-space
+      //Difference of that is # of spaces
+      //The set of differences is then the numbers to add
+      int beg_idx=0;
+      int end_idx=1;
+      int num=0;
+      while(input.find(' ', end_idx) != string::npos)
+      {
+        beg_idx = input.find(' ', end_idx);
+        int i = beg_idx;
+        end_idx = beg_idx;
+        while(input[i]==' ')
+        {
+          ++end_idx;
+          ++i;
+        }
+        
+      num = end_idx - beg_idx;
+      if(num % 2 == 0){ number += "1"; }
+      if(num % 2 == 1){ number += "0"; }
+
+      ++digit_ctr;
+
+      if(digit_ctr > 4){
+      cout << "spaces: " << number << "\n";
+      numbers.push_back(number);
+      number = "";
+      digit_ctr = 0;
+      }
+
       }
     }
+
+      
   } 
 
   vector<int> outputs;
@@ -66,7 +87,6 @@ int main()
     }
     //Converts from float to int
     outputs.push_back(ctr);
-    cout << "Binary " << i << ": " << ctr << "\n";
   }
 
   int temp=0;
