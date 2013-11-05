@@ -50,7 +50,6 @@ void generateNonEs(vector<int>& list)
 
 
             if (it == 0 && !found_e) {
-                cout << i << "\n";
                 list.push_back(i);
             }
         }
@@ -95,7 +94,6 @@ int main()
 
     generateNonEs(list_of_non_e);
     
-    cout << "Please input\n";
     int tmp_int=0;
     istringstream stream2;
     
