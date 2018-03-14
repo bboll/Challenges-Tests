@@ -29,7 +29,7 @@ ___
 
 #### steg.cpp:
 
-I recall this being a program that had to parse the input into a coded message by deriving the algorithm from expected output examples. Short for steganography.
+I recall this being a program that had to parse the input into a coded message and first having to derive the algorithm from expected output examples. Short for steganography.
 
 ___
 
