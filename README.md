@@ -1,2 +1,2 @@
-##### Disclaimer
+#### Disclaimer
 In most cases, I have forgotten what the expected input is. Most of these were problems solved in a lab class where you had 2 hours to write a program that solved as many of the given problems for that day as possible. That being said, a lot of the expected input was very peculiar as the problems were not meant to allow for a common solution or—if they were—it was with some sick twist to input and output or a restriction on algorithm and library uses.
