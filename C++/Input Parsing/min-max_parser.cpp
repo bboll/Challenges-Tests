@@ -31,7 +31,7 @@ int main()
 
   int idx=0;
   bool checkForSolution=false;
-  while(idx<4 && !shitflag)
+  while(idx<4 && !checkForSolution)
   {
     if(count(x, x+4, x[idx]) > 1){ cout << "no solution\n"; checkForSolution=true; }
     if(count(y, y+4, y[idx]) > 1 && !checkForSolution){ cout << "no solution\n"; checkForSolution=true;}
