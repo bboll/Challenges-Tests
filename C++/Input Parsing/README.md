@@ -22,4 +22,4 @@ ___
 
 ##### min-max_parser.cpp:
 
-Takes a strict input of 4 x and y values and finds the difference between max and min x values using arrays and iterators for some reason.
+Takes a strict input of 4 x and y values and finds the difference between max and min x values manipulates them for some reason.
